@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/img/song1.jpg">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="music_player">
+            <header class="header">
+                <h2 style="color:#f08bb0" class="header-des">Now Playing:</h2>
+                <div class="wishlist-icon">
+                    <i class="fa-brands fa-gratipay"></i>
+                </div>
+                <div class="cd-wrapper">
+                    <div class="header-cd" style="background-image: url(./assets/img/song1.jpg)" ;></div>
+                </div>
+            </header>
+
+            <!-- Music name and process bar -->
+            <div class="detail">
+                <h3 class="detail__name">random</h3>
+                <h4 class="detail__author">Eminem</h4>
+            </div>
+            <div class="detail_process">
+                <div class="detail_processbar icon-process">
+
+                </div>
+            </div>
+            <div class="time">
+                <span class="time-current">00:00</span>
+                <span class="time-duration">00:00</span>
+            </div>
+            <div class="control">
+                <div class="list">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+                <div class="previous">
+                    <i class="fa-solid fa-backward-step"></i>
+
+                </div>
+                <div class="start">
+                    <i class="play fa-solid fa-circle-play"></i>
+                    <i class="pause fa-solid fa-circle-pause"></i>
+                </div>
+                <div class="next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="random">
+                    <i class="fa-solid fa-repeat"></i>
+                    <!-- <i class="none fa-solid fa-arrow-rotate-right"></i>
+                    <i class="none fa-solid fa-shuffle"></i> -->
+                </div>
+            </div>
+            <div class="volume">
+                <div class="volume-icon">
+                    <i class="none fa-solid fa-volume-xmark"></i>
+                    <i class=" fa-solid fa-volume-low"></i>
+                    <i class="none fa-solid fa-volume-high"></i>
+                </div>
+                <div class="volume-bar">
+                    <div class="volume-bar__process icon-process">
+
+                    </div>
+
+                </div>
+                <audio id="audio" preload="metadata" src=""></audio>
+            </div>
+
+        </div>
+        <div class="play-list__wrap playwrap">
+            <div class="play-list__header">
+                <img src=" https://cdn-icons-png.flaticon.com/512/7601/7601372.png" alt="" title=""
+                    class="play-list__header-list">
+                <span class="play-list__header-text">My Playlist</span>
+
+                <span class=" play-list__header-exit">
+                    <i class="fa-solid fa-x"></i>
+                </span>
+            </div>
+            <div class="play-list">
+                <div class="song">
+                    <div class="song-avatar" style="background-image: url(./assets/img/song1.jpg);">
+
+                    </div>
+                    <div class="song-des">
+                        <h3 class="song-des__name">Faded</h3>
+                        <h3 class="song-des__singer">Alan</h3>
+                    </div>
+                    <div class="wave">
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                    </div>
+                    <div class="song-option">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="play-list__wrap wishwrap">
+            <div class="play-list__header wishbg">
+                <div class="play-list__header-wish">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <!-- <img src=" https://cdn-icons-png.flaticon.com/512/7601/7601372.png" alt="" title=""
+                    class="play-list__header-list"> -->
+                <span class="play-list__header-text">My Wishlist</span>
+
+                <span class="play-list__header-exit">
+                    <i class="fa-solid fa-x"></i>
+                </span>
+            </div>
+            <div class="wishlist">
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="overlay">
+        <div class="option-select">
+            <span class="option-select__heading">Your option?</span>
+            <span class=" option-select__exit">
+                <i class="fa-solid fa-x"></i>
+            </span>
+            <div class="option-select__wrapper">
+                <span class="option-add">Add to wishlist</span>
+                <span class="option-remove">Remove from wishlist</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
