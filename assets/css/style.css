@@ -24,6 +24,7 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    background: linear-gradient(to top, #1a1918bf 25%, #ae1879 100%);
     background-repeat: no-repeat;
     /* cursor: pointer; */
 }

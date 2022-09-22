@@ -146,10 +146,7 @@ const app = {
     // Render the playlist
     render() {
         const html = this.songs.map((song, index) => {
-            return `<video autoplay loop muted plays-inline class="back-video">
-            <source src="./assets/img/Elementalist Lux - Login Screen - League of Legends.mp4" type="video/mp4">
-        </video>
-            <div class="song ${index === this.currentIndex ? "active" : ""}" data-index=${index}>
+            return `<div class="song ${index === this.currentIndex ? "active" : ""}" data-index=${index}>
                 <div class="song-avatar" style="background-image: url(${song.img});">
                 </div>
                 <div class="song-des ${index === this.currentIndex ? "effect" : ""}">
